@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  timeout: 5000
+  pool: <%= ENV["DB_POOL_SIZE"] || ENV['MAX_THREADS'] || 5 %>
+
+local: &local
+  username: <%= ENV["LOCAL_DB_USER"] %>
+  password: <%= ENV["LOCAL_DB_PASSWORD"] %>
+
+development:
+  <<: *default
+  <<: *local
+  database: ocs-tracker_development
+
+test:
+  <<: *default
+  <<: *local
+  database: ocs-tracker_test
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>

@@ -1,0 +1,83 @@
+html,
+body
+  margin: 0
+
+.turbolinks-progress-bar
+  display: none
+
+.error--container
+  p,
+  h1,
+  h2,
+  h3,
+  h4
+    color: #AAAAAA
+
+.app--body
+  margin: 4.5rem .5rem
+
+.app--body--loader
+  display: none
+
+.app--title
+  padding-left: .5rem
+  flex: 1
+
+.app--search
+  flex: 0
+  visibility: hidden
+  width: 3.25rem
+
+  input
+    width: 3.25rem
+
+  > div > div:before,
+  > div > div:after,
+  input:focus
+    transform: none !important
+    border: none !important
+
+.app--search--icon
+  position: absolute
+  right: 1rem
+  top: .5rem
+  cursor: pointer
+  padding: .75rem .75rem
+
+.app--menu
+  a,
+  a:hover,
+  a:active
+    text-decoration: none
+
+.text--container
+  padding: 1rem 0 0 0
+  max-width: 500px
+  margin: 0 auto 0 auto
+
+.text--container--item
+  text-align: center
+  margin-bottom: .75rem
+
+.products--list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  padding: 0
+  margin: 0
+
+@media screen and (max-width: 600px)
+  .app--body
+    margin: 3.75rem 0 0 0
+
+  .app--search--icon
+    top: .3rem
+
+  .text--container
+    max-width: auto
+    margin-right: 1rem
+    margin-left: 1rem
+
+@media screen and (max-width: 440px)
+  .products--list
+    display: block

@@ -1,0 +1,10 @@
+p Hi there!
+
+p These products were re-stocked today.
+
+- @products.each do |product|
+  - title = "#{product.title} (#{product.vendor})"
+  p= link_to title, "https://ocs.ca/products/#{product.handle}"
+
+p
+  = link_to "Unsubscribe", alerts_unsubscribe_url(@token)

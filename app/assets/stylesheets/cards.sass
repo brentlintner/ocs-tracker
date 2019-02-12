@@ -1,0 +1,27 @@
+.card
+  a,
+  a:hover,
+  a:active
+    text-decoration: none
+
+// TODO: move into components (avoid important)
+
+.card--stock--item,
+.card--actions--type > *
+  margin: 0 .25rem
+  font-size: 1rem !important
+
+.card--stock--item
+  display: inline-flex !important
+
+.card--actions--type
+  flex: 1
+  align-content: center
+  flex-direction: row
+
+[data-react-class=ProductCard]
+  margin: .75rem
+
+@media screen and (max-width: 600px)
+  [data-react-class=ProductCard]
+    margin: 0 0 .25rem 0

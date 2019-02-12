@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+trap "clean_up" INT
+
+clean_up() {
+  cd -
+  exit
+}
+
+cd native
+
+./node_modules/.bin/react-native run-android

@@ -1,0 +1,15 @@
+| Hi there!
+
+= "\r\n"
+= "\r\n"
+
+| These products just sold out!
+
+- @products.each do |product|
+  - title = "#{product.title} (#{product.vendor})"
+  = "\r\n"
+  = "\r\n"
+  = "https://ocs.ca/products/#{product.handle}"
+
+= "\r\n"
+= "\r\n"

@@ -1,0 +1,411 @@
+{
+  "products": [
+    {
+      "id": 1314099070796,
+      "title": "Casablanca Reserve",
+      "body_html": "Indica-dominant Casablanca Reserve from Edison is an indoor-grown hand-trimmed and craft-cured strain. It features forest green flowers with hints of orange, tightly woven buds and an earthy, fresh aroma from the alpha-pinene and myrcene in its terpene mix. It has strong THC potency and is available as 7 g of dried flower. All Organigram products are individually packaged with Integra Boost technology, which preserves freshness and controls relative humidity levels, therefore extending the products’ shelf life.",
+      "vendor": "Edison Reserve",
+      "product_type": "Cannabis",
+      "created_at": "2018-09-13T15:37:36-04:00",
+      "handle": "casa-blanca-reserve",
+      "updated_at": "2019-02-03T00:27:10-05:00",
+      "published_at": "2018-11-22T17:12:31-05:00",
+      "template_suffix": null,
+      "tags": "category--Cannabis, cbd_content_max--1.000000, cbd_content_min--0.000000, effect--Happy, effect--Relaxed, effect--Sleepy, gtin--00671148501720, has_cbd_content, has_thc_content, language--en, plant_type--Indica Dominant, subcategory--Dried Flower, subsubcategory--Indica Dominant, terpenes--Alpha Pinene, terpenes--Beta Caryophyllene, terpenes--Limonene, terpenes--Myrcene, terpenes--Trans Caryophyllene, Test-06/07/2018, thc_content_max--23.000000, thc_content_min--15.000000",
+      "published_scope": "web",
+      "variants": [
+        {
+          "id": 12175426029388,
+          "product_id": 1314099070796,
+          "title": "Default Title",
+          "price": "95.75",
+          "sku": "00671148501720",
+          "position": 1,
+          "compare_at_price": "79.45",
+          "fulfillment_service": "manual",
+          "inventory_management": "shopify",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "created_at": "2018-09-13T15:37:36-04:00",
+          "updated_at": "2019-02-03T00:27:10-05:00",
+          "taxable": true,
+          "barcode": "00671148501720",
+          "grams": 0,
+          "image_id": null,
+          "weight": 0,
+          "weight_unit": "kg",
+          "inventory_item_id": 12230112413516,
+          "requires_shipping": true
+        }
+      ],
+      "options": [
+        {
+          "id": 1755309180748,
+          "product_id": 1314099070796,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 6869096007500,
+          "product_id": 1314099070796,
+          "position": 1,
+          "created_at": "2018-12-13T10:48:56-05:00",
+          "updated_at": "2018-12-13T10:48:56-05:00",
+          "alt": null,
+          "width": 2400,
+          "height": 2400,
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100262-00671148501720-m1c0.png?v=1544716136",
+          "variant_ids": []
+        }
+      ],
+      "image": {
+        "id": 6869096007500,
+        "product_id": 1314099070796,
+        "position": 1,
+        "created_at": "2018-12-13T10:48:56-05:00",
+        "updated_at": "2018-12-13T10:48:56-05:00",
+        "alt": null,
+        "width": 2400,
+        "height": 2400,
+        "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100262-00671148501720-m1c0.png?v=1544716136",
+        "variant_ids": []
+      }
+    },
+    {
+      "id": 1314097497932,
+      "title": "Easy Cheesy",
+      "handle": "easy-cheesy",
+      "body_html": "Easy Cheesy is a sativa-dominant strain with green buds that’s grown and hand-sorted in the Niagara Escarpment. It has strong THC potency, and its terpene mix (myrcene, pinene, guaiol and limonene) contributes to the extra-old cheddar, musky, earthy aroma. Easy Cheesy is available pre-rolled and in three dried flower sizes.\n",
+      "published_at": "2018-11-22T17:10:42-05:00",
+      "created_at": "2018-09-13T15:35:02-04:00",
+      "updated_at": "2019-02-03T01:25:15-05:00",
+      "vendor": "liiv",
+      "product_type": "Cannabis",
+      "tags": [
+        "category--Cannabis",
+        "cbd_content_max--1.000000",
+        "cbd_content_min--0.000000",
+        "effect--Creative",
+        "effect--Energetic",
+        "effect--Euphoric",
+        "effect--Happy",
+        "effect--Uplifted",
+        "gtin--00841464000041",
+        "gtin--00841464000140",
+        "gtin--00841464000201",
+        "has_cbd_content",
+        "has_thc_content",
+        "language--en",
+        "plant_type--Sativa Dominant",
+        "subcategory--Dried Flower",
+        "subsubcategory--Sativa Dominant",
+        "terpenes--Alpha Pinene",
+        "terpenes--Beta-Pinene",
+        "terpenes--Guaiol",
+        "terpenes--Limonene",
+        "terpenes--Myrcene",
+        "Test-06/07/2018",
+        "thc_content_max--24.000000",
+        "thc_content_min--16.000000"
+      ],
+      "variants": [
+        {
+          "id": 12175422326604,
+          "title": "1g",
+          "option1": "1g",
+          "option2": null,
+          "option3": null,
+          "sku": "00841464000041",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "7.95",
+          "grams": 0,
+          "compare_at_price": "9.00",
+          "position": 1,
+          "product_id": 1314097497932,
+          "created_at": "2018-09-13T15:35:02-04:00",
+          "updated_at": "2019-01-30T12:31:47-05:00"
+        },
+        {
+          "id": 12175422359372,
+          "title": "3.5g",
+          "option1": "3.5g",
+          "option2": null,
+          "option3": null,
+          "sku": "00841464000140",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "26.45",
+          "grams": 0,
+          "compare_at_price": "29.93",
+          "position": 2,
+          "product_id": 1314097497932,
+          "created_at": "2018-09-13T15:35:02-04:00",
+          "updated_at": "2019-02-03T01:25:15-05:00"
+        },
+        {
+          "id": 12175422392140,
+          "title": "7g",
+          "option1": "7g",
+          "option2": null,
+          "option3": null,
+          "sku": "00841464000201",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "50.25",
+          "grams": 0,
+          "compare_at_price": "56.70",
+          "position": 3,
+          "product_id": 1314097497932,
+          "created_at": "2018-09-13T15:35:02-04:00",
+          "updated_at": "2019-01-30T12:31:47-05:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 6869082965836,
+          "created_at": "2018-12-13T10:42:22-05:00",
+          "position": 1,
+          "updated_at": "2018-12-13T10:42:22-05:00",
+          "product_id": 1314097497932,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100209-00841464000041-a1c1-c01.png?v=1544715742",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083031372,
+          "created_at": "2018-12-13T10:42:24-05:00",
+          "position": 2,
+          "updated_at": "2018-12-13T10:42:24-05:00",
+          "product_id": 1314097497932,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100209-00841464000140-a1c1-en-c01.png?v=1544715744",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083064140,
+          "created_at": "2018-12-13T10:42:25-05:00",
+          "position": 3,
+          "updated_at": "2018-12-13T10:42:25-05:00",
+          "product_id": 1314097497932,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100209-00841464000140-a1c1-fr-c01.png?v=1544715745",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083096908,
+          "created_at": "2018-12-13T10:42:26-05:00",
+          "position": 4,
+          "updated_at": "2018-12-13T10:42:26-05:00",
+          "product_id": 1314097497932,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100209-00841464000201-a1c1-en-c01.png?v=1544715746",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083227980,
+          "created_at": "2018-12-13T10:42:28-05:00",
+          "position": 5,
+          "updated_at": "2018-12-13T10:42:28-05:00",
+          "product_id": 1314097497932,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100209-00841464000201-a1c1-fr-c01.png?v=1544715748",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "options": [
+        {
+          "name": "Weight",
+          "position": 1,
+          "values": [
+            "1g",
+            "3.5g",
+            "7g"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1314097661772,
+      "title": "Fantasy Island",
+      "handle": "fantasy-island",
+      "body_html": "Fantasy Island from Synr.g is grown and hand-sorted in the Niagara Escarpment. The indica-dominated strain has medium THC potency and a complex taste because of the beta- and trans-caryophyllene, myrcene, limonene and alpha-pinene in its terpene mix. Fantasy Island is available pre-rolled and in three dried flower sizes.\n",
+      "published_at": "2018-10-30T21:13:14-04:00",
+      "created_at": "2018-09-13T15:35:20-04:00",
+      "updated_at": "2019-02-03T00:09:15-05:00",
+      "vendor": "Synr.g",
+      "product_type": "Cannabis",
+      "tags": [
+        "category--Cannabis",
+        "cbd_content_max--1.000000",
+        "cbd_content_min--0.000000",
+        "effect--Creative",
+        "effect--Happy",
+        "effect--Passionate",
+        "effect--Relaxed",
+        "effect--Sleepy",
+        "gtin--00841464000775",
+        "gtin--00841464000850",
+        "gtin--00841464000898",
+        "has_cbd_content",
+        "has_thc_content",
+        "language--en",
+        "plant_type--Indica Dominant",
+        "subcategory--Dried Flower",
+        "subsubcategory--Indica Dominant",
+        "terpenes--Alpha Pinene",
+        "terpenes--Beta Caryophyllene",
+        "terpenes--Limonene",
+        "terpenes--Myrcene",
+        "terpenes--Trans Caryophyllene",
+        "Test-06/07/2018",
+        "thc_content_max--18.000000",
+        "thc_content_min--12.000000"
+      ],
+      "variants": [
+        {
+          "id": 12175422818124,
+          "title": "1g",
+          "option1": "1g",
+          "option2": null,
+          "option3": null,
+          "sku": "00841464000775",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "9.50",
+          "grams": 0,
+          "compare_at_price": "10.00",
+          "position": 1,
+          "product_id": 1314097661772,
+          "created_at": "2018-09-13T15:35:20-04:00",
+          "updated_at": "2019-02-03T00:09:15-05:00"
+        },
+        {
+          "id": 12175422850892,
+          "title": "3.5g",
+          "option1": "3.5g",
+          "option2": null,
+          "option3": null,
+          "sku": "00841464000850",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "31.60",
+          "grams": 0,
+          "compare_at_price": "33.25",
+          "position": 2,
+          "product_id": 1314097661772,
+          "created_at": "2018-09-13T15:35:20-04:00",
+          "updated_at": "2019-02-02T23:38:50-05:00"
+        },
+        {
+          "id": 12175422883660,
+          "title": "7g",
+          "option1": "7g",
+          "option2": null,
+          "option3": null,
+          "sku": "00841464000898",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "60.05",
+          "grams": 0,
+          "compare_at_price": "63.00",
+          "position": 3,
+          "product_id": 1314097661772,
+          "created_at": "2018-09-13T15:35:20-04:00",
+          "updated_at": "2019-01-30T12:32:42-05:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 6869083457356,
+          "created_at": "2018-12-13T10:42:42-05:00",
+          "position": 1,
+          "updated_at": "2018-12-13T10:42:42-05:00",
+          "product_id": 1314097661772,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100215-00841464000775-a1c1-c01.png?v=1544715762",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083555660,
+          "created_at": "2018-12-13T10:42:43-05:00",
+          "position": 2,
+          "updated_at": "2018-12-13T10:42:43-05:00",
+          "product_id": 1314097661772,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100215-00841464000898-a1c1-en.png?v=1544715763",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083621196,
+          "created_at": "2018-12-13T10:42:44-05:00",
+          "position": 3,
+          "updated_at": "2018-12-13T10:42:44-05:00",
+          "product_id": 1314097661772,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100215-00841464000898-a1c1-en-c01.png?v=1544715764",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083686732,
+          "created_at": "2018-12-13T10:42:46-05:00",
+          "position": 4,
+          "updated_at": "2018-12-13T10:42:46-05:00",
+          "product_id": 1314097661772,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100215-00841464000898-a1c1-fr.png?v=1544715766",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "id": 6869083752268,
+          "created_at": "2018-12-13T10:42:47-05:00",
+          "position": 5,
+          "updated_at": "2018-12-13T10:42:47-05:00",
+          "product_id": 1314097661772,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/2636/1928/products/http-52-60-121-34-upload-100215-00841464000898-a1c1-fr-c01.png?v=1544715767",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "options": [
+        {
+          "name": "Weight",
+          "position": 1,
+          "values": [
+            "1g",
+            "3.5g",
+            "7g"
+          ]
+        }
+      ]
+    }
+  ]
+}

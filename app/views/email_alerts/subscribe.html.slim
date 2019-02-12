@@ -1,0 +1,13 @@
+.text--container
+  - if @email_alert_user.errors.any?
+    div class="form--error"
+      ul
+        - @email_alert_user.errors.full_messages.each do |msg|
+          = react_component "Content", component: "li", variant: "body2", text: msg
+
+  .text--container--item
+    - p_txt = "Receive alerts when products are restocked."
+    = react_component "Content", component: "h3", variant: "body1", text: p_txt
+
+  = form_tag(alerts_subscribe_path, id: "email-subscribe", method: "post") do
+    = react_component "EmailAlertRegistrationForm", form_id: "email-subscribe", value: @email_alert_user.email
