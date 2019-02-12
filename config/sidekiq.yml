@@ -1,0 +1,15 @@
+---
+:queues:
+  - [products, 2]
+  - [mailers, 1]
+  - [rollbar, 1]
+production:
+  :concurrency: 10
+  :schedule:
+    sync:
+      every: "1m"
+      class: SyncWorker
+staging:
+  :concurrency: 10
+development:
+  :concurrency: 5

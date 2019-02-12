@@ -1,0 +1,4 @@
+*.bzl linguist-vendored
+BUCK linguist-vendored
+gradlew linguist-vendored
+bin/* linguist-vendored

@@ -1,0 +1,20 @@
+.products--list
+  - if @products.length > 0
+    - @products.each do |product|
+      = react_component "ProductCard", {\
+        img: image_path(Strain.logo(product)),
+        vendor: product.vendor,
+        handle: product.handle,
+        strain: product.strain,
+        plant: product.plant,
+        title: product.title,
+        available: {\
+          p_default: product.p_v_default,
+          p_1g: product.p_v_1g,
+          p_3_5g: product.p_v_3_5g,
+          p_7g: product.p_v_7g,
+          p_15g: product.p_v_15g\
+        }\
+      }
+  - else
+    = react_component "EmptyProductList"

@@ -1,0 +1,7 @@
+p Hi there!
+
+p These products just sold out!
+
+- @products.each do |product|
+  - title = "#{product.title} (#{product.vendor})"
+  p= link_to title, "https://ocs.ca/products/#{product.handle}"

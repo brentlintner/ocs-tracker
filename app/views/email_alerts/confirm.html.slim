@@ -1,0 +1,21 @@
+.text--container
+  - if @email_alert_user.present? && @email_alert_user.confirmed?
+    = react_component "RegisterIcon", ok: true
+    - [ \
+      "Your email has been confirmed.",\
+      "You should start receiving alerts in your inbox shortly."\
+    ].each do |p|
+      .text--container--item
+        = react_component "Content", component: "p", variant: "body1", text: p
+  - else
+    .text--container--item
+      = react_component "RegisterIcon", ok: false
+    .text--container--item
+      = react_component "Content",
+        component: "p",
+        variant: "body1",
+        text: "Your token has expired or doesn't exist."
+    .text--container--item
+      = react_component "Link",
+        href: alerts_subscribe_path,
+        text: "Resend"

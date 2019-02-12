@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  vendor: MyString
+  link: MyString
+  plant: MyString
+  strain: MyString
+  p_id: MyString
+  p_1g: 2019-02-02 22:39:14
+  p_3_5g: 2019-02-02 22:39:14
+  p_7g: 2019-02-02 22:39:14
+
+two:
+  title: MyString
+  vendor: MyString
+  link: MyString
+  plant: MyString
+  strain: MyString
+  p_id: MyString
+  p_1g: 2019-02-02 22:39:14
+  p_3_5g: 2019-02-02 22:39:14
+  p_7g: 2019-02-02 22:39:14

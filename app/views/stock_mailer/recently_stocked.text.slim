@@ -1,0 +1,25 @@
+| Hi there!
+
+= "\r\n"
+= "\r\n"
+
+| These products were re-stocked today:
+
+- @products.each do |product|
+  - title = "#{product.title} (#{product.vendor})"
+  = "\r\n"
+  = "\r\n"
+  = "https://ocs.ca/products/#{product.handle}"
+
+= "\r\n"
+= "\r\n"
+
+| Unsubscribe:
+
+= "\r\n"
+= "\r\n"
+
+= alerts_unsubscribe_url(@token)
+
+= "\r\n"
+= "\r\n"

@@ -1,0 +1,21 @@
+.text--container
+  - if @status
+    = react_component "RegisterIcon", ok: true
+    .text--container--item
+      = react_component "Content",
+        component: "p",
+        variant: "body1",
+        text: "Success!"
+    .text--container--item
+      = react_component "Content",
+        component: "p",
+        variant: "body1",
+        text: "Success! You will no longer receive alerts."
+  - else
+    .text--container--item
+      = react_component "RegisterIcon", ok: false
+    .text--container--item
+      = react_component "Content",
+        component: "p",
+        variant: "body1",
+        text: "Your token has expired or doesn't exist."
