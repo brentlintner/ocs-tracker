@@ -29,6 +29,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "wdm", ">= 0.1.0" if Gem.win_platform?
   gem "foreman"
   gem "awesome_print"
   gem "pry"

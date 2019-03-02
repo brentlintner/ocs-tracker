@@ -30,6 +30,9 @@ sudo -u postgres createuser -s [yourusername]
 sudo -u postgres psql
 \password
 \q
+```
+Then:
+```sh
 npm i -g yarn
 gem install bundler
 sed -i -e 's/^ruby.*//g' Gemfile # ignore version constraints
@@ -42,8 +45,8 @@ Add this to `.env` and fill out appropriately.
 BROWSER=chrome
 SMTP_DEFAULT_FROM=no-reply@ocs-tracker.app
 SMTP_DEFAULT_TO=admin-email@foo.com
-LOCAL_DB_USER=yourusername
-LOCAL_DB_PASSWORD=yourpassword
+LOCAL_DB_USER=yourusername|postgres
+LOCAL_DB_PASSWORD=dbuserpassword
 REDIS_URL=redis://127.0.0.1:6379
 ```
 ## Running Locally
@@ -51,8 +54,10 @@ REDIS_URL=redis://127.0.0.1:6379
 rake db:create
 rake db:schema:load
 rake sync:products
-./bin/dev
+bundle exec foreman start -f Procfile.dev
 ```
+Note: Windows native doesn't support Puma workers, so you will need to put `rails server webrick` as the `web:` command in `Procfile.dev`.
+
 ### Native App Wrappers
 
 Uses [react-native](https://facebook.github.io/react-native).
