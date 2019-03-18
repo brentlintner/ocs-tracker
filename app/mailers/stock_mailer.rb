@@ -16,11 +16,6 @@ class StockMailer < ApplicationMailer
 
   # ---- admin emails ----
 
-  def recently_sold_out product_ids, email=ENV["SMTP_DEFAULT_TO"]
-    @products = Product.where(id: product_ids)
-    mail to: email, subject: "OCS Tracker: Sold Out Items"
-  end
-
   def new_user email=ENV["SMTP_DEFAULT_TO"]
     @total = EmailAlertUser.count
     mail to: email, subject: "OCS Tracker: New Alert Signup"

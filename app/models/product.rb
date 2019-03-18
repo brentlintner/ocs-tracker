@@ -71,7 +71,6 @@ protected
 
     existing_product_ids = []
     recently_stocked_product_ids = []
-    sold_out_product_ids = []
 
     products.each do |shopify_product|
       product = Product.find_or_initialize_by p_id: shopify_product.id
@@ -124,7 +123,6 @@ protected
       end
 
       if previous_available == true && product.available != true
-        sold_out_product_ids << product.id
         product.last_available = DateTime.now - 10.minutes
       end
 
@@ -142,7 +140,6 @@ protected
 
       # only count unstocked as ones that were previously available
       if product.available
-        sold_out_product_ids << product.id
         product.last_available = DateTime.now - 10.minutes
       end
 
@@ -161,7 +158,6 @@ protected
     # -----------
 
     send_restocked_notifications recently_stocked_product_ids
-    send_recently_sold_out_notifications sold_out_product_ids
   end
 
 private
@@ -171,11 +167,6 @@ private
     EmailAlertUser.confirmed.find_each do |user|
       user.send_recently_stocked_email product_ids
     end
-  end
-
-  def self.send_recently_sold_out_notifications product_ids
-    return unless product_ids.length > 0
-    StockMailer.recently_sold_out(product_ids).deliver_later
   end
 
   def self.get_products
