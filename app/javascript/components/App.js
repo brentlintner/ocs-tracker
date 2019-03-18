@@ -56,6 +56,10 @@ const styles = {
   list: {
     width: 290
   },
+  toolbar: {
+    paddingLeft: ".25rem",
+    paddingRight: 0
+  },
   title: {
     [theme.breakpoints.down(600)]: {
       textAlign: "center",
@@ -202,7 +206,7 @@ class App extends React.Component {
     return (
       <MuiThemeProvider theme={theme}>
         <AppBar position="fixed" color="primary">
-          <Toolbar>
+          <Toolbar className={classes.toolbar}>
             <IconButton onClick={this.toggleDrawer("left", true)} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>

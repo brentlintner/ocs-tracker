@@ -49,6 +49,7 @@ function renderSuggestion({ suggestion, index, itemProps, highlightedIndex, sele
     </MenuItem>
   )
 }
+
 renderSuggestion.propTypes = {
   highlightedIndex: PropTypes.number,
   index: PropTypes.number,
@@ -79,21 +80,15 @@ const styles = theme => ({
     height: 250,
   },
   container: {
-    position: "relative",
-    [theme.breakpoints.down(600)]: {
-    }
+    position: "relative"
   },
   paper: {
     position: "absolute",
     zIndex: 1,
     marginTop: ".5rem",
-    left: "-4.5rem",
+    left: "-3.25rem",
     width: window.innerWidth,
-    right: 0,
-    [theme.breakpoints.down(600)]: {
-      left: "-4rem",
-      width: window.innerWidth,
-    }
+    right: 0
   },
   inputRoot: {
     flexWrap: "wrap",

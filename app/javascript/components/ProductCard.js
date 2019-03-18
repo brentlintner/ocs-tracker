@@ -27,6 +27,10 @@ const styles = (theme) => ({
       width: "unset"
     }
   },
+  cardActions: {
+    paddingLeft: "8px",
+    paddingRight: "8px"
+  },
   media: {
     objectFit: "cover"
   },
@@ -87,7 +91,7 @@ function ProductCard(props) {
           </CardContent>
         </CardActionArea>
       </Link>
-      <CardActions className="card--actions">
+      <CardActions className={classes.cardActions + " card--actions"}>
         <div className="card--actions--type">
           <Avatar style={plant_type_styles}>{plant_type}</Avatar>
         </div>
@@ -105,7 +109,7 @@ function ProductCard(props) {
 
 // TODO: add additional prop types!
 ProductCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 }
 
 export default withStyles(styles)(ProductCard)
