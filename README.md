@@ -17,7 +17,6 @@
 * :seedling: See what items are currently in stock
 * :fire: Track recently stocked and sold out items
 * :alarm_clock: Get email alerts for restocked and new items
-* :heart: Save and view favourites
 
 ## FAQ
 
