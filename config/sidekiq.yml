@@ -7,7 +7,7 @@ production:
   :concurrency: 10
   :schedule:
     sync:
-      every: "1m"
+      every: "5m"
       class: SyncWorker
 staging:
   :concurrency: 10

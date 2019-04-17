@@ -30,7 +30,7 @@
     - Only dried flower products are tracked.
 
 - **How precise is the tracking?**
-    - Stock data is currently updated at `1m` intervals. Alerts are generated and sent immediately after.
+    - Stock data is currently updated at `5m` intervals. Alerts are generated and sent immediately after.
 
 - **What does low stock mean?**
     - Any products that only have 1g variants in stock are considered low.
