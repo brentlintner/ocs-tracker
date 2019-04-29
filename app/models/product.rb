@@ -111,9 +111,9 @@ protected
                        tags[plant_type_idx].gsub("plant_type--", "") : "Unknown"
                       ).gsub("Dominant", "").strip
 
-      product.available = product.p_v_default ||
+      product.available = !!(product.p_v_default ||
         product.p_v_1g || product.p_v_3_5g ||
-        product.p_v_7g || product.p_v_15g
+        product.p_v_7g || product.p_v_15g)
 
       existing_product_ids << product.id
 
