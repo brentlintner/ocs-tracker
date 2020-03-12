@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.5.3"
+ruby "2.6.5"
 
 gem "rails", "~> 5.2"
 gem "pg"
@@ -12,7 +12,7 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "hashie", "~> 3.6"
 gem "slim-rails", "~> 3.2"
-gem "webpacker", "~> 3"
+gem "webpacker", "~> 4"
 gem "react-rails", "~> 2"
 
 gem "sidekiq", "~> 5.2"
@@ -32,6 +32,7 @@ group :development do
   gem "wdm", ">= 0.1.0" if Gem.win_platform?
   gem "foreman"
   gem "awesome_print"
+  gem "bundler-audit"
   gem "pry"
   gem "pry-byebug"
   gem "letter_opener"
