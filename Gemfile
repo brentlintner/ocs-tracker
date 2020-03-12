@@ -19,7 +19,7 @@ gem "sidekiq", "~> 5.2"
 gem "sidekiq-scheduler", "~> 3.0"
 
 gem "rollbar", "~> 2.8"
-gem "puma", "~> 3.11"
+gem "puma", "~> 3.12"
 
 gem "bootsnap", ">= 1.1.0", require: false
 
