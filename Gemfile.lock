@@ -136,7 +136,7 @@ GEM
       byebug (~> 10.0)
       pry (~> 0.10)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.4)
     raabro (1.1.6)
     rack (2.0.6)
     rack-protection (2.0.5)
@@ -294,7 +294,7 @@ DEPENDENCIES
   pg
   pry
   pry-byebug
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2)
   react-rails (~> 2)
   rollbar (~> 2.8)
