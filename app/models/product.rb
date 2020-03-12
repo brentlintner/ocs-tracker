@@ -5,7 +5,7 @@ require "json_wrapper"
 
 class Product < ApplicationRecord
   OCS_HOST = "https://ocs.ca"
-  OCS_PRODUCTS_LIST = "/collections/dried-flower-cannabis/products.json"
+  OCS_PRODUCTS_LIST = "/collections/dried-flower/products.json"
   OCS_GET_ARGS = "?limit=1000"
   PRODUCTS_URL = "#{OCS_HOST}#{OCS_PRODUCTS_LIST}#{OCS_GET_ARGS}"
 
