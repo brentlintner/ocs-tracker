@@ -39,7 +39,7 @@ module Strain
     "grail": "grail.png",
     "grasslands": "grasslands.jpg",
     "hexo": "hexo.png",
-    "houseplant": "houseplant.jpeg",
+    "houseplant": "houseplant.jpg",
     "haven st.": "haven-st.png",
     "haven st. premium cannabis": "haven-st.png",
     "high tide": "high-tide.png",
@@ -49,10 +49,10 @@ module Strain
     "lbs": "lbs.png",
     "liiv": "liiv.jpg",
     "marley natural": "marley-natural.png",
-    "mezzero": "namaste.jpeg",
+    "mezzero": "namaste.jpg",
     "msiku": "msiku.png",
-    "muskoka grown": "muskoka-grown.jpeg",
-    "namaste": "namaste.jpeg",
+    "muskoka grown": "muskoka-grown.jpg",
+    "namaste": "namaste.jpg",
     "northern harvest": "northern-harvest.png",
     "northern green canada": "northern-green-canada.jpg",
     "original stash": "hexo.png",
@@ -61,9 +61,9 @@ module Strain
     "pure sunfarms": "pure-sunfarms.jpg",
     "re-up": "re-up.jpg",
     "redecan": "redecan.png",
-    "reef": "reef.jpeg",
+    "reef": "reef.jpg",
     "riff": "riff.png",
-    "robinsons": "robinsons.jpeg",
+    "robinsons": "robinsons.jpg",
     "royal high": "royal-high.png",
     "qwest": "qwest.png",
     "qwest reserve": "qwest.png",
@@ -74,7 +74,7 @@ module Strain
     "simply bare": "simply-bare.png",
     "solei": "solei.png",
     "spinach": "spinach.png",
-    "sundial": "sundial.jpeg",
+    "sundial": "sundial.jpg",
     "symbl": "symbl.jpg",
     "synr.g": "synr.g.jpg",
     "tantalus labs": "tantalus-labs.png",
@@ -97,7 +97,7 @@ module Strain
     "weed me": "weed-me.jpg",
     "whistler cannabis co.": "whistler.jpg",
     "woodstock": "woodstock.png",
-    "xscape": "xscape.jpeg"
+    "xscape": "xscape.jpg"
   })
 
   def self.name shopify_product
