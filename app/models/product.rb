@@ -83,7 +83,7 @@ protected
       product.handle       = shopify_product.handle
       product.vendor       = shopify_product.vendor
       product.p_created_at = shopify_product.created_at.to_datetime
-      product.strain       = Strain.name product
+      product.strain       = Strain.name shopify_product
 
       # TODO: less manual / shitty (use sub model?)
       variants = shopify_product.fetch("variants", [])

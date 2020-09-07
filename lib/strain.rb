@@ -3,42 +3,6 @@ require "json_wrapper"
 module Strain
   extend self
 
-  MAP = JSONWrapper.new({
-    "ace-valley-cbd": "Durga Mata II",
-    "ace-valley-sativa": "BC Ice Cream",
-    "airplane-mode": "Critical Kush",
-    "banana-split": "Luna",
-    "black": "Wappa",
-    "cabaret": "Island Sweet Skunk",
-    "campfire": "Buddha’s Sister",
-    "city-lights": "Critical Kush",
-    "dream-weaver": "MK Ultra",
-    "easy-cheesy": "UK Cheese",
-    "free": "Treasure Island",
-    "galiano": "Northern Lights Haze",
-    "gather": "Jack Herer",
-    "houndstooth": "Candyland",
-    "keats": "White Walker Kush",
-    "kinky-kush": "Gold Kush",
-    "lola-montes": "Hashplant",
-    "lola-montes-reserve": "Hashplant",
-    "moonbeam": "Strawberry Banana",
-    "quadra": "Headstash",
-    "red": "Spoetnik #1",
-    "reflect": "OG Kush",
-    "rest": "Pink Kush",
-    "rio-bravo": "Wabanaki",
-    "rise": "Green Crack",
-    "rise-2": "Green Crack",
-    "ruxton": "Sour OG",
-    "san-fernando-valley-1": "SFV OG",
-    "solar-power-symbl": "Sour Kush",
-    "sunset": "Sour Kush",
-    "super-sonic": "Quantum Kush",
-    "unplug": "Sour Kush",
-    "yin-yang": "Pennywise"
-  })
-
   LOGO_PLACEHOLDER = "ocs.jpg"
 
   LOGOS = JSONWrapper.new({
@@ -80,8 +44,18 @@ module Strain
     "vertical": "vertical.png"
   })
 
-  def self.name product
-    MAP.fetch(product.handle, nil)
+  def self.name shopify_product
+    title = shopify_product.title
+
+    shopify_product.tags.inject(nil) do |found_name, tag|
+      key, value = tag.split("--")
+
+      valid_street_name = key == "street_name" &&
+        value.to_s.downcase != "not applicable" &&
+        title.to_s.downcase != value.to_s.downcase
+
+      if valid_street_name then value else found_name end
+    end
   end
 
   def self.logo product
