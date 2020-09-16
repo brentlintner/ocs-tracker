@@ -108,6 +108,7 @@ module Strain
 
       valid_street_name = key == "street_name" &&
         value.to_s.downcase != "not applicable" &&
+        value.to_s.downcase != "store in a cool" &&
         title.to_s.downcase != value.to_s.downcase
 
       if valid_street_name then value else found_name end
