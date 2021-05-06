@@ -61,7 +61,7 @@ function ProductCard(props) {
 
   // TODO I hate this lol but I'm lazy af right now
   if (typeof available.p_default == "boolean" && !available.p_1g &&
-    !available.p_3_5g && !available.p_7g && !available.p_15g) {
+    !available.p_3_5g && !available.p_7g && !available.p_15g && !available.p_28g) {
     v_default = (
       <StockChip inStock={available.p_default} amount="I"></StockChip>
     )
@@ -101,6 +101,7 @@ function ProductCard(props) {
           <StockChip inStock={available.p_3_5g} amount="3.5g"></StockChip>
           <StockChip inStock={available.p_7g} amount="7g"></StockChip>
           <StockChip inStock={available.p_15g} amount="15g"></StockChip>
+          <StockChip inStock={available.p_28g} amount="28g"></StockChip>
         </div>
       </CardActions>
     </Card>

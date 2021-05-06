@@ -10,7 +10,7 @@ class Product < ApplicationRecord
   PRODUCTS_URL = "#{OCS_HOST}#{OCS_PRODUCTS_LIST}#{OCS_GET_ARGS}"
 
   def available_only_1g
-    available && p_v_1g && !p_v_default && !p_v_3_5g && !p_v_7g && !p_v_15g
+    available && p_v_1g && !p_v_default && !p_v_3_5g && !p_v_7g && !p_v_15g && !p_v_28g
   end
 
   def self.sync
@@ -33,7 +33,7 @@ class Product < ApplicationRecord
     all_stock.where(
       "available = true AND p_v_1g = true AND "\
       "p_v_3_5g IS NOT TRUE AND p_v_7g IS NOT TRUE "\
-      "AND p_v_15g IS NOT TRUE")
+      "AND p_v_15g IS NOT TRUE AND p_v_28g IS NOT TRUE")
   end
 
   def self.recently_stocked
@@ -98,6 +98,8 @@ protected
           product.p_v_7g   = avail
         when "15g"
           product.p_v_15g  = avail
+        when "28g"
+          product.p_v_28g  = avail
         when "Default Title"
           # TODO: weird for ones with only one size
           product.p_v_default = true
@@ -113,7 +115,8 @@ protected
 
       product.available = !!(product.p_v_default ||
         product.p_v_1g || product.p_v_3_5g ||
-        product.p_v_7g || product.p_v_15g)
+        product.p_v_7g || product.p_v_15g ||
+        product.p_v_28g)
 
       existing_product_ids << product.id
 
