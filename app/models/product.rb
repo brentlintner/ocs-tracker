@@ -6,8 +6,10 @@ require "json_wrapper"
 class Product < ApplicationRecord
   OCS_HOST = "https://ocs.ca"
   OCS_PRODUCTS_LIST = "/collections/dried-flower/products.json"
-  OCS_GET_ARGS = "?limit=1000"
-  PRODUCTS_URL = "#{OCS_HOST}#{OCS_PRODUCTS_LIST}#{OCS_GET_ARGS}"
+  PRODUCTS_URL = "#{OCS_HOST}#{OCS_PRODUCTS_LIST}"
+  PAGE_LIMIT = 50
+  MAX_ATTEMPTS = 50
+  QUERY_DELAY = 0.05
 
   def available_only_1g
     available && p_v_1g && !p_v_default && !p_v_3_5g && !p_v_7g && !p_v_15g && !p_v_28g
@@ -15,6 +17,10 @@ class Product < ApplicationRecord
 
   def self.sync
     update_products
+  end
+
+  def self.sync_no_notify
+    update_products notify: false
   end
 
   def self.all_stock
@@ -66,14 +72,18 @@ class Product < ApplicationRecord
 
 protected
 
-  def self.update_products
+  def self.update_products notify: true
+    existing_product_ids = []
+
     products = get_products
 
-    existing_product_ids = []
     recently_stocked_product_ids = []
 
     products.each do |shopify_product|
-      product = Product.find_or_initialize_by p_id: shopify_product.id
+      product = Product.find_or_initialize_by(
+        vendor: shopify_product.vendor,
+        title: shopify_product.title
+      )
 
       previous_available = product.available
       previous_available_only_1g = product.available_only_1g
@@ -85,7 +95,6 @@ protected
       product.p_created_at = shopify_product.created_at.to_datetime
       product.strain       = Strain.name shopify_product
 
-      # TODO: less manual / shitty (use sub model?)
       variants = shopify_product.fetch("variants", [])
       variants.each do |variant|
         avail = variant["available"]
@@ -101,7 +110,6 @@ protected
         when "28g"
           product.p_v_28g  = avail
         when "Default Title"
-          # TODO: weird for ones with only one size
           product.p_v_default = true
           break
         end
@@ -118,8 +126,6 @@ protected
         product.p_v_7g || product.p_v_15g ||
         product.p_v_28g)
 
-      existing_product_ids << product.id
-
       if previous_available != true && product.available
         recently_stocked_product_ids << product.id
         product.last_unavailable = DateTime.now - 10.minutes
@@ -129,19 +135,18 @@ protected
         product.last_available = DateTime.now - 10.minutes
       end
 
-      # -----------
-
       product.save!
+
+      existing_product_ids << product.id
     end
 
     all_product_ids = Product.pluck :id
-    non_existing_product_ids = all_product_ids - existing_product_ids
-    # TODO: probably better to get available: true vs clobber all
+
+    non_existing_product_ids = all_product_ids - existing_product_ids.uniq
+
     non_existing_product_ids.each do |id|
-      # clobber all to unstocked
       product = Product.find id
 
-      # only count unstocked as ones that were previously available
       if product.available
         product.last_available = DateTime.now - 10.minutes
       end
@@ -152,15 +157,14 @@ protected
       product.p_v_3_5g =    product.p_v_3_5g    == true ? false : product.p_v_3_5g
       product.p_v_7g =      product.p_v_7g      == true ? false : product.p_v_7g
       product.p_v_15g =     product.p_v_15g     == true ? false : product.p_v_15g
-
-      # -----------
+      product.p_v_28g =     product.p_v_28g     == true ? false : product.p_v_28g
 
       product.save!
     end
 
-    # -----------
-
-    send_restocked_notifications recently_stocked_product_ids
+    if notify
+      send_restocked_notifications recently_stocked_product_ids
+    end
   end
 
 private
@@ -173,12 +177,38 @@ private
   end
 
   def self.get_products
-    uri = URI PRODUCTS_URL
-    response = Net::HTTP.get uri
-    json = JSON.parse response
-    # TODO: avoid values key overriding
-    json["products"].map do |product|
-      JSONWrapper.new product
+    total_products = []
+    page = 1
+    attempts = 1
+
+    loop do
+      query_args = "?limit=#{PAGE_LIMIT}&page=#{page}"
+      uri = URI "#{PRODUCTS_URL}#{query_args}"
+
+      begin
+        response = Net::HTTP.get uri
+        json = JSON.parse response
+        products = json["products"].map do |product|
+          JSONWrapper.new product
+        end
+        sleep QUERY_DELAY
+      rescue
+        attempts += 1
+        next
+      end
+
+      total_products << products
+
+      if attempts >= MAX_ATTEMPTS
+        raise Exception.new "ABORT: #{attempts} attempts made querying #{uri}"
+      end
+
+      break if products.length == 0 || products.length < PAGE_LIMIT
+
+      attempts += 1
+      page += 1
     end
+
+    total_products.flatten!
   end
 end
