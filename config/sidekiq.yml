@@ -4,12 +4,12 @@
   - [mailers, 1]
   - [rollbar, 1]
 production:
-  :concurrency: 10
+  :concurrency: 8
   :schedule:
     sync:
       every: "5m"
       class: SyncWorker
 staging:
-  :concurrency: 10
+  :concurrency: 8
 development:
   :concurrency: 5
