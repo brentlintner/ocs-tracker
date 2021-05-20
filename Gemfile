@@ -4,22 +4,22 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "~> 2.7.3"
 
-gem "rails", "~> 5.2"
+gem "rails", "~> 6"
 gem "pg"
 gem "sass-rails", "~> 6.0"
 gem "uglifier", ">= 1.3.0"
-gem "turbolinks", "~> 5"
+gem "turbolinks", "~> 5.2"
 gem "jbuilder", "~> 2.5"
-gem "hashie", "~> 3.6"
+gem "hashie", "~> 4"
 gem "slim-rails", "~> 3.2"
-gem "webpacker", "~> 4"
+gem "webpacker", "~> 5"
 gem "react-rails", "~> 2"
 
-gem "sidekiq", "~> 5.2"
+gem "sidekiq", "~> 6"
 gem "sidekiq-scheduler", "~> 3.0"
 
-gem "rollbar", "~> 2.8"
-gem "puma", "~> 3.12"
+gem "rollbar", "~> 3.1"
+gem "puma", "~> 5.3"
 
 gem "bootsnap", ">= 1.1.0", require: false
 
