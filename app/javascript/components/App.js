@@ -44,6 +44,9 @@ $(document).on("turbolinks:visit", () => {
 })
 
 const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
   palette: {
     primary: blue,
     secondary: {
