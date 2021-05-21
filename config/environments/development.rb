@@ -1,15 +1,17 @@
 Rails.application.configure do
+  config.hosts = (ENV['SERVER_HOSTS'].split(",")|| []) << "localhost"
+
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = false
   # Settings specified here will take precedence over those in config/application.rb.
 
   config.action_mailer.default_url_options = {
-    host: "localhost:4000",
+    host: "localhost:8000",
     protocol: "http"
   }
 
   config.action_controller.default_url_options = {
-    host: "localhost:4000",
+    host: "localhost:8000",
     protocol: "http"
   }
 

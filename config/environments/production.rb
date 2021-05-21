@@ -1,4 +1,6 @@
 Rails.application.configure do
+  config.hosts = [ "ocs-tracker.app", "ocs-tracker.herokuapp.com" ]
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.delivery_method = :smtp
 
