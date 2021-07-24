@@ -12,6 +12,8 @@
   <img style="background: none" src="app/assets/images/screenshot.jpg" alt="OCS Tracker Screenshot">
 </p>
 
+**Note:** This project has been taken offline. It's too much to keep up to date and the original reason this was made is now less of an issue (ocs.ca is decently fast to use).
+
 ## Features
 
 * :seedling: See what items are currently in stock
